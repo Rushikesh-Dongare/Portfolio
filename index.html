@@ -1,263 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav-logo">Rushikesh</a>
-            </div>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rushikesh Dongare | Portfolio</title>
+    <link rel="icon" type="image/png" href="Images/ChatGPT_Image_Jan_23__2026__10_35_02_PM-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-            <div class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
+    <style>
+        :root {
+            --bg-main: #0a1026;
+            --bg-card: #0f1b3d;
+            --primary: #4fc3f7;
+            --secondary: #7c83ff;
+            --text-main: #ffffff;
+            --text-muted: #bfc6e0;
+        }
 
-            <div class="nav-toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
 
-        </nav>
-    </header>
+        body {
+            background: radial-gradient(circle at top, #16204a, var(--bg-main));
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    <main class="l-main">
-        <section class="home bd-grid" id="home">
-            <div class="home-data">
-                <h1 class="home-title">Hi, <br>I'm <span class="home-title-color">Rushikesh</span><br> Software Developer</h1>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rushikeshdongare30@gmail.com" class="button gmail">
-                  <i class="fab fa-google"></i> <span>Contact</span>
-                </a>
-                <a class="resume-download button" href="https://drive.google.com/file/d/1S605YGitTdGbk8ojt0wacrILVclGwCkI/view?usp=sharing"> Download Resume </a>
-            </div>
+        section {
+            padding: 80px 10%;
+        }
 
-            <div class="home-social">
-                <a href="https://www.linkedin.com/in/rushikeshdongare/" class="home-social-icon"><i class='bx bxl-linkedin' ></i></a>
-                <a href="https://www.instagram.com/_strivingsoul__/" class="home-social-icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="https://github.com/Rushikesh-Dongare" class="home-social-icon"><i class='bx bxl-github' ></i></a>
-            </div>
+        .section-title,
+        .skills-section h2,
+        .cta-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: 0.5px;
+            font-size: 2.2rem;
+        }
 
-            <div class="home-img">
-                <img src="Images/Rushikesh_Dongare-removebg-preview.png" alt="image">
-            </div>
-        </section>
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
 
-        <section class="about section" id="about">
-            <h2 class="section-title">About</h2>
 
-            <div class="about-container bd-grid">
-                <div class="about-img">
-                    <img src="Images/Rushikesh_Dongare-removebg-preview (1).png" alt="image">
-                </div>
 
-                <div>
-                    <h2 class="about-subtitle">I'm Rushikesh,</h2>
-                    <p class="about-text">a passionate Software Developer with a keen interest in building intuitive and dynamic web applications. My journey in software development began with a fascination for how technology can solve real-world problems. Over the years, I've worked on a variety of web projects, creating seamless digital experiences for users and helping businesses establish their online presence.</p>
-                </div>
-            </div>
-        </section>
+        /* ---------- HERO ---------- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            min-height: 100vh;
+            gap: 40px;
+        }
 
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
+        .hero-left span {
+            color: var(--primary);
+        }
 
-            <div class="skills-container bd-grid">
-                <div>
-                    <h2 class="skills-subtitle">Professional Skills</h2>
-                    <p class="skills-text">I’m passionate about solving complex problems with innovative Java solutions. I focus on creating scalable and efficient applications, ensuring that they meet both technical and user requirements.</p>
-					
-					<div class="Skills-names">
+        .hero-left h1 {
+            font-size: 3rem;
+            margin: 15px 0;
+            line-height: normal;
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">Java</span>
-              </div>
-            </div>
-  
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">JDBC</span>
-              </div>
-            </div>
+        .hero-left h1 span {
+            color: var(--primary);
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">Java Collectios</span>
-              </div>
-            </div>
+        .hero-left h2 {
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">Servlets</span>
-              </div>
-            </div>
+        .hero-left p {
+            max-width: 500px;
+            margin-bottom: 30px;
+            color: var(--text-muted);
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">Data Dtructure</span>
-              </div>
-            </div>
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">Spring</span>
-              </div>
-            </div>
+        .btn {
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: .3s;
+            text-decoration: none;
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">Spring Boot</span>
-              </div>
-            </div>
+        .btn.primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #000;
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">HTML</span>
-              </div>
-            </div>
+        .btn.outline {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">CSS3</span>
-              </div>
-            </div>
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(79, 195, 247, .3);
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">JavaScript</span>
-              </div>
-            </div>
+        .hero-right img {
+            width: 100%;
+            justify-self: center;
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">Shopify</span>
-              </div>
-            </div>
+        /* ---------- SERVICES ---------- */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">Wordpress</span>
-              </div>
-            </div>
+        .service-card {
+            background: var(--bg-card);
+            padding: 35px;
+            border-radius: 18px;
+            transition: .3s;
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">Webflow</span>
-              </div>
-            </div>
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
 
-            <div class="skills-data">
-              <div class="skills-names">
-                <span class="skills-name">Wix</span>
-              </div>
-              
-            </div>
-             
-          </div>
-          
-                    
-                    </div>
-                    <div>
-                    <img src="https://i.postimg.cc/52LWbPyt/work3.jpg" alt="image" class="skills-img">
-                </div>
-                </div>
+        .service-card p {
+            color: var(--text-muted);
+        }
 
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(79, 195, 247, .25);
+        }
+
+        /* ---------- SKILLS (NEW DESIGN) ---------- */
+        .skills-section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 14px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tags span {
+            padding: 6px 14px;
+            font-size: 13px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+        }
+
+
+        /* ---------- PORTFOLIO ---------- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-item {
+            background: var(--bg-card);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(79, 195, 247, 0.25);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: #0a1026;
+            padding: 20px;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .project-role {
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+
+        .project-tech {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+
+        /*------------ CTA Section --------*/
+        .cta-section {
+            text-align: center;
+            padding: 90px 10%;
+            /* background: linear-gradient(180deg, rgba(79, 195, 247, 0.05), transparent); */
+        }
+
+        .cta-section h2 {
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            max-width: 650px;
+            margin: 0 auto 35px;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+
+
+
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #070b1d;
+            color: var(--text-muted);
+        }
+
+        /* ---------- WhatsApp Button ---------- */
+        .whatsapp-float img {
+            width: 100%;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 56px;
+            height: 56px;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+        }
+
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .skills-grid {
                
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-left">
+            <span>WELCOME</span>
+            <h1>Hi, I’m <span>Rushikesh Dongare</span></h1>
+            <h2>Frontend Developer | WordPress & Shopify</h2>
+            <p>I build fast, responsive, and user-focused websites using modern frontend technologies, WordPress, and
+                Shopify. I specialize in turning designs into high-performing digital experiences.</p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">My Work</a>
+                <a href="mailto:rushikeshdongare@email.com" class="btn outline">
+                    Contact Me
+                </a>
             </div>
-        </section>
-
-        <section class="work section" id="work">
-            <h2 class="section-title">Work</h2>
-
-            <div class="work-container bd-grid">
-                <div class="work-img">
-                  <a href="https://www.memskeepsake.com/">
-                    <img src="https://www.memskeepsake.com/cdn/shop/files/square_grid_1080_x_500_px_87490717-d7e6-4324-bbe6-7c8170bc261a_160x.svg?v=1723856207" alt="image">
-                  </a>
-                </div>
-
-                <div class="work-img">
-                  <a herf="https://app.gohighlevel.com/v2/preview/EX9gr2ng6HCl3tFwcx7V?notrack=true">
-                    <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/W2Z0IKsJVrQBa73txPjD/media/6659bbf5f6139275615e99b3.png" alt="image">
-                  </a>
-                </div>
-
-                <div class="work-img">
-                  <a herf="https://bondiroadballoons.com/">
-                    <img src="https://bondiroadballoons.com/cdn/shop/files/1.png?v=1719539415&width=225" alt="image">
-                  </a>
-                </div>
-
-
-<!--                 <div class="work-img">
-                  <a href="https://www.enforcity.com/">
-                    <img src="Images/Screenshot 2025-01-11 111302.png" alt="image">
-                  </a>
-                </div> -->
-
-                <div class="work-img">
-                  <a href="https://www.musicfiends.com/">
-                    <img src="https://www.musicfiends.com/wp-content/uploads/2023/09/MF-CatHead-bigRGB-NEW-font9.png" alt="image">
-                  </a>  
-                </div>
-
-                <div class="work-img">
-                    <a href="https://balancebloomnaturals.com/products/unlock-your-natural-vitality-with-bb-shilajit-gummies">
-                      <img src="Images/Screenshot 2025-01-11 112907.png" alt="image">
-                    </a>
-                </div>
-
-                <div class="work-img">
-                    <a href="https://dickrinkleclothing.com/collections/frontpage/products/classic-boxer-briefs-1-pack-black-gray">
-                      <img src="https://dickrinkleclothing.com/cdn/shop/files/Dick_Rinkle_R_Red.jpg?v=1732878042&width=1200" alt="image">
-                    </a>
-                </div>
-
-                <div class="work-img">
-                  <a href="https://www.campanellas.com/">
-                    <img src="https://cdn.prod.website-files.com/6659dfba7a583d4883d4186a/666b3f4a01058ef52f958db3_Campanellas%20Logo%20v6%20Black.svg" alt="image">
-                  </a>
-              </div>
-            </div>
-        </section>
-        
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
-
-            <div class="contact-container bd-grid">
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rushikeshdongare30@gmail.com" class="button gmail">
-                <i class="fab fa-google"></i> <span>Contact</span>
-              </a>
-              <a class="resume-download button contact-button11" href="https://drive.google.com/file/d/1S605YGitTdGbk8ojt0wacrILVclGwCkI/view?usp=sharing"> Download Resume </a>
-          
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p class="footer-title">Rushikesh</p>
-
-        <div class="footer-social">
-            <a href="https://www.linkedin.com/in/rushikeshdongare/" class="footer-icon"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://www.instagram.com/_strivingsoul__/" class="footer-icon"><i class='bx bxl-instagram' ></i></a>
-            <a href="https://github.com/Rushikesh-Dongare" class="footer-icon"><i class='bx bxl-github' ></i></a>
-	    <a href="https://www.hackerrank.com/profile/RushikeshDongare"><i class="fa-brands fa-hackerrank"></i></a>
         </div>
 
-        <p>&#169; 2025 Copyright all rights reserved</p>
+        <div class="hero-right">
+            <img src="Images/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon.png"
+                alt="Profile">
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section>
+        <h2 class="section-title">What I Do</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>I build clean, scalable, and responsive websites using modern HTML, CSS, and JavaScript, ensuring
+                    maintainable code and long-term reliability.</p>
+            </div>
+            <div class="service-card">
+                <h3>UI / Frontend Development</h3>
+                <p>I translate UI/UX designs into polished, user-friendly interfaces with a strong focus on usability,
+                    accessibility, and smooth interactions.</p>
+            </div>
+            <div class="service-card">
+                <h3>Performance & Optimization</h3>
+                <p>I optimize websites for speed, SEO, and cross-device performance, delivering fast-loading and
+                    high-performing web experiences.</p>
+            </div>
+            <div class="service-card">
+                <h3>CMS & E-commerce Development</h3>
+                <p>Custom WordPress and Shopify development, including theme customization, store optimization, and
+                    performance improvements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+
+            <!-- Frontend -->
+            <div class="skill-card">
+                <h3>Frontend Technologies</h3>
+                <p>Building responsive, cross-browser compatible interfaces using modern frontend standards and
+                    animation techniques. <br><br></p>
+                <div class="skill-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Web Design</span>
+                    <span>Cross-Browser Compatibility</span>
+                    <span>GSAP Animations</span>
+                    <span>Liquid Template Language</span>
+                </div>
+            </div>
+
+            <!-- Web Development -->
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>Developing and maintaining scalable websites with API integrations, performance optimization, and CRM
+                    workflows.<br><br></p>
+                <div class="skill-tags">
+                    <span>API Integrations</span>
+                    <span>RESTful Services</span>
+                    <span>Performance Optimization</span>
+                    <span>Website Deployment</span>
+                    <span>Website Maintenance</span>
+                    <span>CRM Integrations</span>
+                    <span>Marketing Automation Setup</span>
+                </div>
+            </div>
+
+            <!-- CMS & Ecommerce -->
+            <div class="skill-card">
+                <h3>CMS & E-commerce Platforms</h3>
+                <p>Custom development and optimization for content-driven and e-commerce platforms.<br><br></p>
+                <div class="skill-tags">
+                    <span>WordPress Theme Development</span>
+                    <span>WordPress Plugin Integration</span>
+                    <span>Shopify Theme Development</span>
+                    <span>Shopify Store Optimization</span>
+                    <span>Webflow</span>
+                    <span>GoHighLevel (CRM)</span>
+                    <span>Wix</span>
+                    <span>Custom Theme Creation</span>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-card">
+                <h3>Database & Backend</h3>
+                <p>Working knowledge of databases and backend integrations to support dynamic web functionality.<br><br>
+                </p>
+                <div class="skill-tags">
+                    <span>MySQL</span>
+                    <span>SQL</span>
+                    <span>Basic Backend Integration</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-card">
+                <h3>Development Tools</h3>
+                <p>Using industry-standard tools and workflows to ensure clean code, collaboration, and efficient
+                    delivery.<br><br></p>
+                <div class="skill-tags">
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Debugging & Troubleshooting</span>
+                    <span>Cross-Platform Testing</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-item">
+                <img src="Images/Bondi_Road_Balloons_logo_and_Brand_colors_2_300x@2x.avif" alt="Bondi Road Balloons">
+
+                <div class="project-content">
+                    <h3>E-commerce Website</h3>
+                    <p class="project-desc">
+                        Shopify-based e-commerce store with custom theme development, responsive UI, and performance
+                        optimization.
+                    </p>
+
+                    <p class="project-role">
+                        <strong>Role:</strong> Frontend & Shopify Developer
+                    </p>
+
+                    <p class="project-tech">
+                        HTML • CSS • JavaScript • Shopify • Liquid
+                    </p>
+
+                    <a href="https://bondiroadballoons.com/" target="_blank" class="project-link">
+                        View Live →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item">
+                <img src="Images/MF-CatHead-bigRGB-NEW-font9.png" alt="Music Fiends">
+
+                <div class="project-content">
+                    <h3>Blog & Content Platform</h3>
+                    <p class="project-desc">
+                        Identified and removed malicious code, restored site functionality, fixed broken UI issues, and
+                        improved performance and on-page SEO.
+                    </p>
+
+                    <p class="project-role">
+                        <strong>Role:</strong> Frontend / WordPress Developer
+                    </p>
+
+                    <p class="project-tech">
+                        WordPress • HTML • CSS • JavaScript • Debugging • Security Cleanup • SEO
+                    </p>
+
+                    <a href="https://www.musicfiends.com/" target="_blank" class="project-link">
+                        View Live →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item">
+                <img src="Images/ACTIN-Logo_Light.svg" alt="ACTIN">
+
+                <div class="project-content">
+                    <h3>Corporate Website</h3>
+                    <p class="project-desc">
+                        Corporate WordPress website built with Elementor, focused on performance optimization and clean
+                        UI.
+                    </p>
+
+                    <p class="project-role">
+                        <strong>Role:</strong> Frontend & WordPress Developer
+                    </p>
+
+                    <p class="project-tech">
+                        WordPress • Elementor • CSS • JavaScript • Performance Optimization
+                    </p>
+
+                    <a href="https://actin.co.in/" target="_blank" class="project-link">
+                        View Live →
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Project 4 -->
+            <div class="project-item">
+                <img src="Images/Brainayan-Learning-and-Development-Light.png" alt="ACTIN">
+
+                <div class="project-content">
+                    <h3>Education & Learning Platform</h3>
+                    <p class="project-desc">
+                        Developed and customized an education-focused website with responsive layouts, content
+                        management, and performance optimization. Improved usability, fixed UI issues, and enhanced
+                        on-page SEO for better visibility.
+                    </p>
+
+                    <p class="project-role">
+                        <strong>Role:</strong> Frontend & WordPress Developer
+                    </p>
+
+                    <p class="project-tech">
+                        WordPress • HTML • CSS • JavaScript • Elementor • Debugging • On-Page SEO • Performance
+                        Optimization
+                    </p>
+
+                    <a href="https://brainayan.com/" target="_blank" class="project-link">
+                        View Live →
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Project 5 -->
+            <div class="project-item">
+                <img src="Images/Screenshot 2025-01-11 111302.png" alt="ACTIN">
+
+                <div class="project-content">
+                    <h3>Corporate Website</h3>
+                    <p class="project-desc">
+                        Built a professional corporate website focused on clean UI, responsive design, and clear content
+                        structure. Implemented frontend enhancements and ensured consistent performance across devices
+                        and browsers.
+                    </p>
+
+                    <p class="project-role">
+                        <strong>Role:</strong> Webflow Designer
+                    </p>
+
+                    <p class="project-tech">
+                        HTML • CSS • Webflow • JavaScript • Responsive Design • Cross-Browser Compatibility
+                    </p>
+
+                    <a href="https://www.enforcity.com/" target="_blank" class="project-link">
+                        View Live →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Let’s Work Together</h2>
+        <p>
+            I’m open to frontend, WordPress, and Shopify opportunities.
+            Feel free to reach out for collaborations, freelance projects, or full-time roles.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="https://drive.google.com/your-resume-link-here" target="_blank" class="btn primary">
+                📄 Download Resume
+            </a>
+
+            <a href="mailto:rushikeshdongare@email.com" class="btn outline">
+                ✉️ Contact Me
+            </a>
+        </div>
+    </section>
+
+
+    <footer>
+        © 2026 Rushikesh Dongare
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    
-    <script src="myscripts.js"></script>
+
+    <a href="https://wa.me/919119485385?text=Hi%20Rushikesh,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect."
+        class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <img src="Images/whatsapp_1384079.png">
+    </a>
+
 </body>
+
 </html>
